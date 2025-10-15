@@ -14,9 +14,15 @@ const App = () => {
 
   const filteredQuestions=selectedCategory?questions.filter(q=>q.category===selectedCategory):questions;
 
+
+  const difficultyCounts: Record<string, number> = {};
+  filteredQuestions.forEach(q => {
+    difficultyCounts[q.difficulty] = (difficultyCounts[q.difficulty] || 0) + 1;
+  });
+
   const difficultyData=['easy','medium','hard'].map(d=>({
     name:d,
-    value: filteredQuestions.filter(q=>q.difficulty===d).length
+    value: difficultyCounts[d]||0
   }))
 
   const categoryData=Object.entries(byCategory).map(([name,value])=>({name,value}))

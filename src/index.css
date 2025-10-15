@@ -1,12 +1,63 @@
 body {
-  font-family: sans-serif;
-  background: #f8f8f8;
-  color: #333;
   margin: 0;
-  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* header part */
 .header {
   text-align: center;
-  margin: 1rem 0;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* filtre */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: #eee;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.filters button:hover {
+  background-color: #ddd;
+}
+
+.filters button.active {
+  background-color: #007acc;
+  color: #fff;
+}
+
+/* Chart container spacing */
+.app > div {
+  margin-top: 40px;
 }

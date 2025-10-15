@@ -3,7 +3,7 @@ import { Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recha
 
 type Props={ data: {name:string; value:number}[]};
 
-const COLORS=['green', 'yellow', 'red']
+const COLORS=['green', 'grey', 'red']
 const DifficultyPie:FC<Props>= ({data}) => {
     return (
         <div style={{ width: '100%', height: 250 }}>

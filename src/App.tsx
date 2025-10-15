@@ -3,6 +3,7 @@ import useQuestions from './hooks/useQuestions';
 import Header from './components/Header';
 import Filters from './components/Filters';
 import CategoryBar from './components/CategoryBar';
+import DifficultyPie from './components/DifficultyPie';
 
 const App = () => {
   const {questions,categories,byCategory,byDifficulty,loading,error}=useQuestions()
@@ -25,6 +26,7 @@ const App = () => {
       <Header/>
       <Filters categories={categories} selected={selectedCategory} onSelect={setSelectedCategory}/>
       <CategoryBar data={categoryData}/>
+      <DifficultyPie data={difficultyData}/>
     </div>
   );
 };

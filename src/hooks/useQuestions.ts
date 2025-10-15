@@ -22,7 +22,7 @@ export default function useQuestions(){
     const byCategory=countBy(questions,(q)=>q.category)
     const byDifficulty=countBy(questions, (q)=>q.difficulty)
 
-    return {questions,categories,byCategory,byDifficulty}
+    return {questions,categories,byCategory,byDifficulty,loading,error}
 
 
 }
